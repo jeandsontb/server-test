@@ -1,5 +1,18 @@
 const list = (req, res) => {
-  res.send('Home')
+  res.render('home', {
+    time: 10,
+    li: [
+      'Jeandson',
+      'Tenorio',
+      'Braz'
+    ],
+    animals: [
+      { name: 'koster' },
+      { name: 'Lion' },
+      { name: 'Cebola' },
+      { name: 'Dragon' }
+    ]
+  });  
 }
 
 const create = (req, res) => {
@@ -11,9 +24,9 @@ const calc = (req, res) => {
 
   if(num1 && num2) {
     const sum = parseFloat(num1) + parseFloat(num2);
-    res.send('A soma é '+sum);
+    res.render('calc', { sum });
   } else {
-    res.send('calculadora');
+    res.render('error');
   }
 }
 

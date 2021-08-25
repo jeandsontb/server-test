@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+
+    <h2>A som é: <%= sum %> </h2>
+
+    <% if(sum%2 === 0) { %>
+      <p>A soma do número é Par</p>
+    <% } else { %>
+      <p>A soma do número é Impar</p>
+    <% } %>
+<%- include('partials/footer') %>
